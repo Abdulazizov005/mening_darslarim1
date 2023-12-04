@@ -1,0 +1,79 @@
+def son():
+    
+    import random
+
+    javob = input('Qaysi o`yin turini tanlaysiz\nQiyin o`yin turini yoki Oson o`yin turini: ').title()
+
+    b = random.randint(1,100)
+
+    qiyin_jon = 5
+
+    oson_jon = 10
+
+    c = 0
+
+
+    if javob == 'Qiyin':
+     
+        while True:
+            a = int(input('O`ylagan raqamingizni kiriting: '))
+            # print(b)
+            c +=1
+    
+            if a == b:
+                print(f'Tabriklayman siz {c} urinishda topdingiz!!!')
+                # print(b)
+                break
+    
+            if a > b:
+                qiyin_jon -=1
+                print(f'Kichikroq son kiriting!!\nSizning {qiyin_jon}ta imkoniyatingiz qoldi')
+                # print(b)
+            elif a < b:
+                qiyin_jon -=1
+                print(f'Kattaroq son kiriting!!\nSizning {qiyin_jon}ta imkoniyatingiz qoldi')
+                # print(b)
+    
+            if qiyin_jon == 0:
+                print(f'Afsus siz yutqazdingiz\nO`ylangan son {b} edi')
+                break 
+
+    elif javob == 'Oson':
+    
+        while True:
+    
+            a = int(input('O`ylagan raqamingizni kiriting: '))
+     
+            # print(b)
+    
+            c +=1
+    
+            if a == b:
+                print(f'Tabriklayman siz {c} urinishda topdingiz!!!')
+                #print(b)
+                break
+    
+            if a > b:
+                oson_jon -=1
+                print(f'Kichikroq son kiriting!!\nSizning {oson_jon}ta imkoniyatingiz qoldi')
+                # print(b)
+            elif a < b:
+                oson_jon -=1
+                print(f'Kattaroq son kiriting!!\nSizning {oson_jon}ta imkoniyatingiz qoldi')
+                # print(b)
+    
+            if oson_jon == 0:
+                print(f'Afsus siz yutqazdingiz\nO`ylangan son {b} edi')
+                
+son()
+
+yana = input('O`yinni yana davom ettirishni xohlaysizmi\nHa yoki Yo`q: ').title()
+while True:
+   
+    if yana == 'Ha':
+        print(son())
+
+    
+    else:
+        print('GAME OVER!!')
+        break
