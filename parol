@@ -1,0 +1,19 @@
+import random
+
+a = ''
+b = []
+
+while True:
+    j = input('enter: ')
+    for i in range(4):
+        a += random.choice(['1','2','3','4','5','6','7'])
+    if j == '1':
+        break
+    elif a not in b:
+        print(a)
+        b.append(a)
+        a = ''
+    else:
+
+        a 
+        print('birozdan keyin urinib ko`r')
